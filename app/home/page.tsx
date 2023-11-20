@@ -1,3 +1,6 @@
+"use client";
+
+import Link from "next/link";
 import FooterIndex from "../components/footerIndex";
 import Accordion from "./accordion";
 import Body from "./body";

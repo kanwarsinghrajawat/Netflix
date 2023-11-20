@@ -1,5 +1,6 @@
-import { accordion } from "@/constants";
-import Form from "@/utils/form";
+"use client";
+import { accordion } from "@/app/constants";
+import Form from "@/app/utils/form";
 import Image from "next/image";
 import React, { useState } from "react";
 

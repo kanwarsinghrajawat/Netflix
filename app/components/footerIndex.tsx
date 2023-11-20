@@ -1,4 +1,6 @@
-import { footerLinks } from "@/constants";
+"use client";
+
+import { footerLinks } from "@/app/constants";
 import Link from "next/link";
 
 const FooterIndex = () => {

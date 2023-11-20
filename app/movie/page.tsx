@@ -1,7 +1,14 @@
 import React from "react";
+import Navbar from "./navbar";
+import MovieContainer from "./body";
 
 const page = () => {
-  return <div>page</div>;
+  return (
+    <>
+      <Navbar />
+      <MovieContainer />
+    </>
+  );
 };
 
 export default page;

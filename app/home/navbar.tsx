@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,7 +14,10 @@ const Navbar = () => {
           height={37}
         />
         <div>
-          <Link href="" className="bg-red-600 px-3 py-2 rounded-md text-white">
+          <Link
+            href="/signIn"
+            className="bg-red-600 px-3 py-2 rounded-md text-white"
+          >
             Sign In
           </Link>
         </div>

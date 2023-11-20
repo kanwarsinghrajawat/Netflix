@@ -1,6 +1,7 @@
+import Image from "next/image";
 import React from "react";
+import Form from "@/app/utils/form";
 import DetailCard from "./detailCard";
-import Form from "@/utils/form";
 
 const Body = () => {
   return (
