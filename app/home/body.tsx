@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Form from "@/app/utils/form";
 import DetailCard from "./detailCard";
+import TrailerBackground from "../movie/trailerBackground";
 
 const Body = () => {
   return (
@@ -20,12 +21,19 @@ const Body = () => {
           </div>
         </div>
         <hr className="h-2 bg-black bg-opacity-60 w-full"></hr>
-        <DetailCard
-          heading="Enjoy on your TV"
-          title="   Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more"
-          image="/tv.png"
-          style="flex-row"
-        />
+        <div className="relative">
+          {" "}
+          <DetailCard
+            heading="Enjoy on your TV"
+            title="   Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more"
+            image="/tv.png"
+            style="flex-row"
+          />{" "}
+          <div className="w-1/6 h-3/4 absolute top-0 left-2/4">
+            <TrailerBackground movieId={"926393"} />
+          </div>
+        </div>
+
         <DetailCard
           heading="Download your shows to watch offline"
           title="Save your favourites easily and always have something to watch"
@@ -33,6 +41,7 @@ const Body = () => {
           style="flex-row-reverse"
           gifOnImage={true}
         />
+
         <DetailCard
           heading="Watch everywhere"
           title="   Stream unlimited movies and TV shows on your phone, tablet,

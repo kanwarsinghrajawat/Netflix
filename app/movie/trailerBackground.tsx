@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import UseTrailer from "../components/hooks/useTrailer";
 
@@ -13,6 +10,7 @@ const TrailerBackground = ({ movieId }: any) => {
   return (
     <>
       <iframe
+        className="w-full aspect-video h-full"
         width="560"
         height="315"
         src={

@@ -14,7 +14,6 @@ export const useNowHook = () => {
       );
       const data = await response.json();
       dispatch(addPlayingMovies(data.results));
-      // console.log(data.results, "ghjkl");
     } catch (error) {
       console.error("Error fetching data:", error);
     }

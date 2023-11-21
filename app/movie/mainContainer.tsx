@@ -12,9 +12,9 @@ const MainContainer = () => {
   console.log(movies);
 
   const mainMovies = movies?.nowPLayingMovies?.[0];
-  // console.log(mainMovies.original_title);
 
   const { original_title, id, title } = mainMovies;
+
   return (
     <>
       <TrailerTitle />

@@ -19,6 +19,7 @@ const UseTrailer = (movieId: any) => {
       const response = await fetch(apiUrl);
 
       const data = await response.json();
+      console.log(data);
 
       const trailer = data?.results.filter(
         (item: any) => item.type === "Trailer"
