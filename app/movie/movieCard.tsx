@@ -24,7 +24,8 @@ const MovieCard: React.FC<MovieCardProps> = ({
       onMouseLeave={() => setHovered(false)}
     >
       <div>
-        {isHovered ? (
+        {/* {isHovered ?
+         (
           <iframe
             key={id}
             src={poster_path}
@@ -34,15 +35,16 @@ const MovieCard: React.FC<MovieCardProps> = ({
             //   loop
             className="movie-video"
           />
-        ) : (
-          <img
-            height={150}
-            width={200}
-            src={poster_path}
-            alt={title}
-            className="movie-poster"
-          />
-        )}
+        ) :
+         ( */}
+        <img
+          height={150}
+          width={200}
+          src={poster_path}
+          alt={title}
+          className="movie-poster"
+        />
+        {/* )} */}
       </div>
 
       <p className="movie-title">{title}</p>

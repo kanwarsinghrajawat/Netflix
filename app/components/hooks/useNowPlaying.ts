@@ -1,7 +1,7 @@
 "use client";
 
 import { API_KEY } from "@/app/constants";
-import { addPlayingMovies } from "@/app/store/moviesStore";
+import { addPlayingMovies } from "@/app/reduxStore/moviesStore";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
@@ -14,7 +14,7 @@ export const useNowHook = () => {
       );
       const data = await response.json();
       dispatch(addPlayingMovies(data.results));
-      console.log(data.results, "ghjkl");
+      // console.log(data.results, "ghjkl");
     } catch (error) {
       console.error("Error fetching data:", error);
     }
