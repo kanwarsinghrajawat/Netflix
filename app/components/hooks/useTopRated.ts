@@ -1,10 +1,7 @@
 "use client";
 
 import { API_KEY } from "@/app/constants";
-import {
-  addPlayingMovies,
-  addTopRatedMovies,
-} from "@/app/reduxStore/moviesStore";
+import { addTopRatedMovies, setIsLoader } from "@/app/reduxStore/moviesStore";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
@@ -17,7 +14,7 @@ export const useTopRated = () => {
       );
       const data = await response.json();
       dispatch(addTopRatedMovies(data.results));
-      // console.log(data.results, "ghjkl");
+      dispatch(setIsLoader(false));
     } catch (error) {
       console.error("Error fetching data:", error);
     }

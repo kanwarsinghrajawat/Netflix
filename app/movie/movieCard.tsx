@@ -1,18 +1,6 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import DetailCard from "../home/detailCard";
-import Slider from "react-slick";
-
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 10,
-  slidesToScroll: 10,
-};
+import MovieDetailModal from "../utils/movieDetailModal";
 
 interface MovieCardProps {
   id: number;
@@ -27,13 +15,20 @@ const MovieCard: React.FC<MovieCardProps> = ({
   poster_path,
   //   videoUrl,
 }) => {
+  // const [openModal, setOpenModal] = useState(true);
   return (
     <div>
-      <img
-        src={poster_path}
-        alt={title}
-        className="movie-poster h-full w-full object-fill rounded-smzz"
-      />
+      <div
+        className=" w-52 h-32 object-fill cursor-pointer"
+        // onClick={() => setOpenModal(true)}
+      >
+        <img
+          src={poster_path}
+          alt={title}
+          className="movie-poster h-full w-full object-fill rounded-sm "
+        />
+      </div>
+      {/* {openModal && <MovieDetailModal closeModal={() => setOpenModal(false)} />} */}
     </div>
   );
 };

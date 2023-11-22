@@ -4,8 +4,6 @@ import Link from "next/link";
 const FooterIndex = () => {
   return (
     <>
-      {/* <hr className="h-1 bg-black bg-opacity-60 w-full"></hr> */}
-
       <div className=" text-white px-80 py-16 bg-black">
         <div className="w-full grid gap-4 grid-cols-4 ">
           {footerLinks.map((item, index) => (

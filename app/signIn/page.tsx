@@ -7,8 +7,8 @@ import FooterIndex from "../components/footerIndex";
 const SignIn = () => {
   return (
     <>
-      <div className="relative overflow-x-hidden">
-        <div className="absolute z-5">
+      <div className="relative overflow-x-hidden h-full">
+        <div className="absolute z-50">
           <Image
             src="/Netflix_Logo_PMS.png"
             alt="Netflix-logo"
@@ -17,10 +17,13 @@ const SignIn = () => {
           />
         </div>
 
-        <div className="bg-contain  image-parent h-[100vh] relative items-center justify-center">
-          <SignInPopUp />
-          <FooterIndex />
+        <div className="  signInImage h-screen relative items-center justify-center">
+          <div className="absolute h-full w-full top-0 left-0 right-0 bottom-0 bg-black opacity-40"></div>
+          <div className="flex items-center w-full justify-center h-full">
+            <SignInPopUp />
+          </div>
         </div>
+        <FooterIndex />
       </div>
     </>
   );

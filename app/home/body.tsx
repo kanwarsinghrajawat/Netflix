@@ -29,9 +29,9 @@ const Body = () => {
             image="/tv.png"
             style="flex-row"
           />{" "}
-          <div className="w-1/6 h-3/4 absolute top-0 left-2/4">
+          {/* <div className="w-1/6 h-3/4 absolute top-0 left-2/4">
             <TrailerBackground movieId={"926393"} />
-          </div>
+          </div> */}
         </div>
 
         <DetailCard

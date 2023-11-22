@@ -1,7 +1,7 @@
 "use client";
 
 import { API_KEY } from "@/app/constants";
-import { trailerVedio } from "@/app/reduxStore/moviesStore";
+import { setIsLoader, trailerVedio } from "@/app/reduxStore/moviesStore";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
@@ -26,6 +26,7 @@ const UseTrailer = (movieId: any) => {
       );
       const filteredTrailer = trailer.length ? trailer[0] : data?.results[0];
       dispatch(trailerVedio(filteredTrailer?.key));
+      dispatch(setIsLoader(false));
     } catch (error) {
       console.error("Error fetching data:", error);
     }

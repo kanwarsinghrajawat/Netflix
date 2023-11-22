@@ -21,12 +21,22 @@ const Navbar = () => {
           </div>
         </div>
         <div>
-          <div>
-            <Link
-              href="/signout"
-              className="bg-red-600 px-3 py-2 rounded-md text-white"
-            >
-              Sign Out
+          <div className="flex gap-2">
+            <Image
+              src="/kanwar.png"
+              className=" rounded-sm"
+              alt=""
+              height={25}
+              width={25}
+            ></Image>{" "}
+            <Link href="/signout">
+              <Image
+                src="/kanwar.png"
+                className=" rounded-sm"
+                alt=""
+                height={25}
+                width={25}
+              ></Image>{" "}
             </Link>
           </div>{" "}
         </div>

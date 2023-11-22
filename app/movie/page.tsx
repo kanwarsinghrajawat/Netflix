@@ -2,13 +2,22 @@ import React from "react";
 import Navbar from "./navbar";
 import MovieContainer from "./movieContainer";
 import MainContainer from "./mainContainer";
+import { useSelector } from "react-redux";
+import Spinner from "../utils/loader";
 
 const page = () => {
+  // const loading = useSelector((store: any) => store?.movies?.isLoader);
   return (
     <>
-      <Navbar />
-      <MainContainer />
-      <MovieContainer />
+      {/* {loading ? ( */}
+      <>
+        <Navbar />
+        <MainContainer />
+        <MovieContainer />
+      </>
+      {/* ) : (
+        <Spinner />
+      )} */}
     </>
   );
 };
