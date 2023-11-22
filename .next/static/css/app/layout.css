@@ -566,6 +566,9 @@ video {
 .relative {
   position: relative;
 }
+.inset-0 {
+  inset: 0px;
+}
 .bottom-0 {
   bottom: 0px;
 }
@@ -581,11 +584,17 @@ video {
 .right-16 {
   right: 4rem;
 }
+.right-3 {
+  right: 0.75rem;
+}
 .top-0 {
   top: 0px;
 }
 .top-1\/3 {
   top: 33.333333%;
+}
+.top-3 {
+  top: 0.75rem;
 }
 .top-56 {
   top: 14rem;
@@ -633,11 +642,11 @@ video {
 .h-3\/4 {
   height: 75%;
 }
-.h-32 {
-  height: 8rem;
-}
 .h-\[80vh\] {
   height: 80vh;
+}
+.h-auto {
+  height: auto;
 }
 .h-full {
   height: 100%;
@@ -657,14 +666,14 @@ video {
 .w-44 {
   width: 11rem;
 }
-.w-52 {
-  width: 13rem;
-}
 .w-72 {
   width: 18rem;
 }
 .w-96 {
   width: 24rem;
+}
+.w-\[150px\] {
+  width: 150px;
 }
 .w-full {
   width: 100%;
@@ -733,9 +742,6 @@ video {
 }
 .overflow-hidden {
   overflow: hidden;
-}
-.overflow-x-auto {
-  overflow-x: auto;
 }
 .overflow-x-hidden {
   overflow-x: hidden;
@@ -824,6 +830,10 @@ video {
   padding-left: 4rem;
   padding-right: 4rem;
 }
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -831,6 +841,10 @@ video {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .px-7 {
   padding-left: 1.75rem;
@@ -843,10 +857,6 @@ video {
 .px-80 {
   padding-left: 20rem;
   padding-right: 20rem;
-}
-.px-9 {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
 }
 .py-16 {
   padding-top: 4rem;
@@ -863,6 +873,10 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.py-\[2px\] {
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 .pt-32 {
   padding-top: 8rem;
@@ -887,6 +901,10 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 .text-6xl {
   font-size: 3.75rem;
@@ -990,6 +1008,9 @@ video {
 
 .slick-slider {
   width: 100%;
+}
+.slick-slide > div {
+  margin: 0 10;
 }
 
 .bg-custom {

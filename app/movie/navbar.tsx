@@ -2,6 +2,7 @@ import { movieNavbarLinks } from "@/app/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import SearchInput from "../utils/searchInput";
 
 const Navbar = () => {
   return (
@@ -21,24 +22,26 @@ const Navbar = () => {
           </div>
         </div>
         <div>
-          <div className="flex gap-2">
+          <div className="flex gap-3 items-center ">
+            <SearchInput />
+
             <Image
               src="/kanwar.png"
               className=" rounded-sm"
               alt=""
               height={25}
               width={25}
-            ></Image>{" "}
+            ></Image>
             <Link href="/signout">
               <Image
-                src="/kanwar.png"
+                src="/shutdown.png"
                 className=" rounded-sm"
-                alt=""
+                alt="shiutdownImage"
                 height={25}
                 width={25}
-              ></Image>{" "}
+              ></Image>
             </Link>
-          </div>{" "}
+          </div>
         </div>
       </div>
     </>

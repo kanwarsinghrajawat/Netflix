@@ -18,7 +18,7 @@ const MovieContainer = () => {
   console.log(movies);
   const [openModal, setOpenModal] = useState(true);
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 8,
@@ -38,7 +38,11 @@ const MovieContainer = () => {
                     key={movie.id}
                     id={movie.id}
                     title={movie.title}
+                    movieType={"nowPLayingMovies"}
                     poster_path={`${POSTER_URL}${movie.poster_path}`}
+                    overview={movie.overview}
+                    releaseDate={movie.release_date}
+                    voteAverage={movie.vote_average}
                   />
                 </React.Fragment>
               ))}
@@ -56,6 +60,10 @@ const MovieContainer = () => {
                     id={movie.id}
                     title={movie.title}
                     poster_path={`${POSTER_URL}${movie.poster_path}`}
+                    movieType={"popularMovies"}
+                    overview={movie.overview}
+                    releaseDate={movie.release_date}
+                    voteAverage={movie.vote_average}
                   />
                 </React.Fragment>
               ))}
@@ -73,23 +81,16 @@ const MovieContainer = () => {
                     id={movie.id}
                     title={movie.title}
                     poster_path={`${POSTER_URL}${movie.poster_path}`}
+                    movieType={"topRatedMovies"}
+                    overview={movie.overview}
+                    releaseDate={movie.release_date}
+                    voteAverage={movie.vote_average}
                   />
                 </React.Fragment>
               ))}
             </Slider>
           </div>
         </div>
-        {openModal && (
-          <MovieDetailModal
-            id={movies.id}
-            title={movies.original_title}
-            overview={movies.overview}
-            poster_path={`${POSTER_URL}${movies.poster_path}`}
-            releaseDate={movies.release_date}
-            closeModal={() => setOpenModal(false)}
-            voteAverage={movies.vote_average}
-          />
-        )}
       </div>
     </>
   );

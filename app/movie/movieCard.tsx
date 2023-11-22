@@ -6,29 +6,51 @@ interface MovieCardProps {
   id: number;
   title: string;
   poster_path: string;
-  //   videoUrl: string;
+  movieType: string;
+  overview: string;
+  releaseDate: string;
+  voteAverage: string;
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({
   id,
   title,
   poster_path,
-  //   videoUrl,
+  movieType,
+  overview,
+  releaseDate,
+  voteAverage,
 }) => {
-  // const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
+  const handleFilterMOdal = () => {
+    setOpenModal(true);
+  };
   return (
     <div>
       <div
-        className=" w-52 h-32 object-fill cursor-pointer"
-        // onClick={() => setOpenModal(true)}
+        className=" w-[150px] h-auto  cursor-pointer "
+        onClick={handleFilterMOdal}
       >
         <img
           src={poster_path}
           alt={title}
-          className="movie-poster h-full w-full object-fill rounded-sm "
+          className="movie-poster h-full w-[150px]  rounded-sm "
         />
       </div>
-      {/* {openModal && <MovieDetailModal closeModal={() => setOpenModal(false)} />} */}
+      {openModal ? (
+        // <div className="h-screen bg-black opacity-60 fixed inset-0 w-screen z-50 flex items-center justify-center rounded-lg">
+        //   <MovieDetailModal
+        //     id={id}
+        //     title={title}
+        //     overview={overview}
+        //     poster_path={poster_path}
+        //     releaseDate={releaseDate}
+        //     closeModal={() => setOpenModal(false)}
+        //     voteAverage={voteAverage}
+        //   />
+        // </div>
+        <div className="text-white text-5xl">one</div>
+      ) : null}
     </div>
   );
 };

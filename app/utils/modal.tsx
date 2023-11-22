@@ -17,15 +17,15 @@ const Modal = () => {
           <p className="text-black">
             You'll be redirected to Netflix.com in 30 seconds.
           </p>
-          <div className="text-center px-4 py-2 bg-blue-600 transform scale-95 transition-transform duration-150 ease-in-out">
-            <Link
-              href="/"
-              onClick={() => setShowModal(false)}
-              className="text-white transform scale-95 transition-transform duration-150 ease-in-out"
-            >
+          <Link
+            href="/"
+            onClick={() => setShowModal(false)}
+            className="text-white transform scale-95 transition-transform duration-150 ease-in-out"
+          >
+            <div className="text-center px-4 py-2 bg-blue-600 transform scale-95 transition-transform duration-150 ease-in-out">
               Go Now
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
       )}
     </>

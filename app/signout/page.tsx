@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 import FooterIndex from "../components/footerIndex";
 import Link from "next/link";
 import Modal from "../utils/modal";
+import ReactPlayer from "react-player";
 
 const SignOut = () => {
   return (
@@ -33,6 +35,11 @@ const SignOut = () => {
           width={1920}
         />
       </div>
+      {/* <ReactPlayer
+        url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+        playing={true}
+        width={100}
+      /> */}
 
       <FooterIndex />
     </div>
