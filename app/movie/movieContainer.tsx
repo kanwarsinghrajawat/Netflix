@@ -6,10 +6,10 @@ import MovieCard from "./movieCard";
 import { POSTER_URL } from "../constants";
 import { usePopular } from "../components/hooks/usePopular";
 import { useTopRated } from "../components/hooks/useTopRated";
-import MovieDetailModal from "../utils/movieDetailModal";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import NoResultFound from "./noResultFound";
 const MovieContainer = () => {
   useNowHook();
   usePopular();
@@ -35,25 +35,24 @@ const MovieContainer = () => {
         {filteredData == null ? (
           <>
             {" "}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-7 ">
               <p className="text-white text-xl font-bold">Now Playing</p>
-              <div className="flex gap-2 h-full">
-                <Slider {...settings}>
-                  {data?.nowPLayingMovies?.map((movie: any, key: number) => (
-                    <React.Fragment key={key}>
-                      <MovieCard
-                        key={movie.id}
-                        id={movie.id}
-                        title={movie.title}
-                        movieType={"nowPLayingMovies"}
-                        poster_path={`${POSTER_URL}${movie.poster_path}`}
-                        overview={movie.overview}
-                        releaseDate={movie.release_date}
-                        voteAverage={movie.vote_average}
-                      />
-                    </React.Fragment>
-                  ))}
-                </Slider>
+              <div className="flex gap-2 h-full overflow-x-auto">
+                {/* <Slider {...settings}> */}
+                {data?.nowPLayingMovies?.map((movie: any, key: number) => (
+                  <React.Fragment key={key}>
+                    <MovieCard
+                      key={movie.id}
+                      id={movie.id}
+                      title={movie.title}
+                      poster_path={movie.poster_path}
+                      overview={movie.overview}
+                      releaseDate={movie.release_date}
+                      voteAverage={movie.vote_average}
+                    />
+                  </React.Fragment>
+                ))}
+                {/* </Slider> */}
               </div>
             </div>
             <div className="flex flex-col gap-4">
@@ -66,8 +65,7 @@ const MovieContainer = () => {
                       key={movie.id}
                       id={movie.id}
                       title={movie.title}
-                      poster_path={`${POSTER_URL}${movie.poster_path}`}
-                      movieType={"popularMovies"}
+                      poster_path={movie.poster_path}
                       overview={movie.overview}
                       releaseDate={movie.release_date}
                       voteAverage={movie.vote_average}
@@ -79,42 +77,49 @@ const MovieContainer = () => {
             </div>
             <div className="flex flex-col gap-4">
               <p className="text-white text-xl font-bold">TopRated Movies</p>
-              <div className="flex gap-2 relative">
-                <Slider {...settings}>
-                  {data?.topRatedMovies?.map((movie: any, key: number) => (
-                    <React.Fragment key={key}>
-                      <MovieCard
-                        key={movie.id}
-                        id={movie.id}
-                        title={movie.title}
-                        poster_path={`${POSTER_URL}${movie.poster_path}`}
-                        movieType={"topRatedMovies"}
-                        overview={movie.overview}
-                        releaseDate={movie.release_date}
-                        voteAverage={movie.vote_average}
-                      />
-                    </React.Fragment>
-                  ))}
-                </Slider>
+              <div className="flex gap-2 relative overflow-x-auto">
+                {/* <Slider {...settings}> */}
+                {data?.topRatedMovies?.map((movie: any, key: number) => (
+                  <React.Fragment key={key}>
+                    <MovieCard
+                      key={movie.id}
+                      id={movie.id}
+                      title={movie.title}
+                      poster_path={movie.poster_path}
+                      overview={movie.overview}
+                      releaseDate={movie.release_date}
+                      voteAverage={movie.vote_average}
+                    />
+                  </React.Fragment>
+                ))}
+                {/* </Slider> */}
               </div>
             </div>
           </>
         ) : (
           <div>
-            {filteredData.map((movie: any, index: any) => (
-              <React.Fragment key={index}>
-                <MovieCard
-                  key={movie.id}
-                  id={movie.id}
-                  title={movie.title}
-                  poster_path={`${POSTER_URL}${movie.poster_path}`}
-                  movieType={"topRatedMovies"}
-                  overview={movie.overview}
-                  releaseDate={movie.release_date}
-                  voteAverage={movie.vote_average}
-                />
-              </React.Fragment>
-            ))}
+            {filteredData.length === 0 ? (
+              <NoResultFound />
+            ) : (
+              <div className="py-20 flex items-center flex-col gap-8">
+                <p className="text-white text-3xl font-bold">Search Results</p>
+                {filteredData.map((movie: any, index: any) => (
+                  <React.Fragment key={index}>
+                    <div className="flex items-center justify-center">
+                      <MovieCard
+                        key={movie.id}
+                        id={movie.id}
+                        title={movie.title}
+                        poster_path={movie.poster_path}
+                        overview={movie.overview}
+                        releaseDate={movie.release_date}
+                        voteAverage={movie.vote_average}
+                      />
+                    </div>
+                  </React.Fragment>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </div>

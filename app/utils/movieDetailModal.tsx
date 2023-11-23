@@ -11,6 +11,10 @@ const MovieDetailModal = ({
   voteAverage,
   id,
 }: any) => {
+  {
+    console.log("ghjk", poster_path);
+  }
+
   return (
     <>
       <div className="w-1/4 h-3/4 bg-gray-950  mix-blend-lighten absolute flex flex-col box-border z-100 overflow-y-auto boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)">

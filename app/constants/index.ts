@@ -1,5 +1,6 @@
 export const API_KEY = "e8c3571ae66b7e581fa0634eb2b4bc24";
 export const POSTER_URL = "https://image.tmdb.org/t/p/w200";
+export const POSTER_URL_MODAL = "https://image.tmdb.org/t/p/w500";
 
 export const accordion = [
   {

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import MovieDetailModal from "../utils/movieDetailModal";
+import { POSTER_URL, POSTER_URL_MODAL } from "../constants";
 
 interface MovieCardProps {
   id: number;
   title: string;
   poster_path: string;
-  movieType: string;
   overview: string;
   releaseDate: string;
   voteAverage: string;
@@ -15,7 +15,6 @@ const MovieCard: React.FC<MovieCardProps> = ({
   id,
   title,
   poster_path,
-  movieType,
   overview,
   releaseDate,
   voteAverage,
@@ -32,23 +31,26 @@ const MovieCard: React.FC<MovieCardProps> = ({
         onClick={handleFilterModal}
       >
         <img
-          src={poster_path}
+          src={`${POSTER_URL}${poster_path}`}
           alt={title}
           className="movie-poster h-full w-[150px] rounded-sm"
         />
       </div>
       {openModal && (
-        <div className="h-screen bg-black bg-opacity-80 fixed inset-0 w-screen z-50 flex items-center justify-center rounded-lg ">
-          <MovieDetailModal
-            id={id}
-            title={title}
-            overview={overview}
-            poster_path={poster_path}
-            releaseDate={releaseDate}
-            closeModal={() => setOpenModal(false)}
-            voteAverage={voteAverage}
-          />
-        </div>
+        <>
+          {console.log("FGTYHGHIJHK", poster_path)}
+          <div className="h-screen bg-black bg-opacity-80 fixed inset-0 w-screen z-50 flex items-center justify-center rounded-lg ">
+            <MovieDetailModal
+              id={id}
+              title={title}
+              overview={overview}
+              poster_path={`${POSTER_URL_MODAL}${poster_path}`}
+              releaseDate={releaseDate}
+              closeModal={() => setOpenModal(false)}
+              voteAverage={voteAverage}
+            />
+          </div>
+        </>
       )}
     </div>
   );
