@@ -5,8 +5,7 @@ import { useNowHook } from "../components/hooks/useNowPlaying";
 import MovieCard from "./movieCard";
 import { usePopular } from "../components/hooks/usePopular";
 import { useTopRated } from "../components/hooks/useTopRated";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import NoResultFound from "./noResultFound";
 const MovieContainer = () => {
   useNowHook();
