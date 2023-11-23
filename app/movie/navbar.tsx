@@ -7,7 +7,7 @@ import SearchInput from "../utils/searchInput";
 const Navbar = () => {
   return (
     <>
-      <div className="fixed z-50 bg-black w-full flex justify-between px-8 py-2 items-center">
+      <div className="fixed z-50  w-full flex justify-between px-8 py-2 items-center bg-gradient-to-b from-black to-gray-600 h-12 ">
         <div className="flex items-center gap-12">
           <Image
             src="/Netflix_Logo_PMS.png"

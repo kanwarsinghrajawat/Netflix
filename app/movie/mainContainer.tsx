@@ -7,8 +7,10 @@ import Link from "next/link";
 
 const MainContainer = () => {
   const movies = useSelector((store: any) => store.movies);
-  const searchMovie = useSelector((store: any) => store?.movies?.searchData);
-
+  // const searchMovie = useSelector((store: any) => store?.movies?.searchData);
+  const filteredData = useSelector(
+    (store: any) => store?.movies?.searchResultsCrad
+  );
   if (!movies || !movies.nowPLayingMovies) return;
   console.log("mainContainer movies");
   console.log(movies);
@@ -19,7 +21,7 @@ const MainContainer = () => {
 
   return (
     <>
-      {searchMovie == null && (
+      {filteredData === null && (
         <div className="relative overflow-x-hidden">
           <TrailerBackground movieId={id} />
           <div className="absolute top-1/3 px-8 w-2/4 flex flex-col gap-6">

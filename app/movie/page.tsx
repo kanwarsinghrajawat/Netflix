@@ -1,24 +1,19 @@
-"use client";
-
 import React from "react";
 import Navbar from "./navbar";
 import MovieContainer from "./movieContainer";
 import MainContainer from "./mainContainer";
-import { useSelector } from "react-redux";
-import Spinner from "../utils/loader";
+
+import FooterIndex from "../components/footerIndex";
 
 const page = () => {
   return (
     <>
-      {/* {loading ? ( */}
       <>
         <Navbar />
-        {<MainContainer />}
+        <MainContainer />
         <MovieContainer />
+        <FooterIndex />
       </>
-      {/* ) : (
-        <Spinner />
-      )} */}
     </>
   );
 };

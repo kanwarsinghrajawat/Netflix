@@ -4,11 +4,10 @@ import React, { useState } from "react";
 import FooterIndex from "../components/footerIndex";
 import Link from "next/link";
 import Modal from "../utils/modal";
-import ReactPlayer from "react-player";
 
 const SignOut = () => {
   return (
-    <div className="w-full">
+    <div className="w-full h-screen">
       <div className="absolute flex justify-between w-full px-8 py-2 items-center">
         <Image
           src="/Netflix_Logo_PMS.png"
@@ -28,18 +27,12 @@ const SignOut = () => {
       <div className="flex items-start justify-center">
         <Modal />
 
-        <Image
+        <img
           src="/sigOut.jpg"
           alt="crown-girlSignOut-image"
-          height={100}
-          width={1920}
+          className="w-full h-full md-sm:h-96 "
         />
       </div>
-      {/* <ReactPlayer
-        url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-        playing={true}
-        width={100}
-      /> */}
 
       <FooterIndex />
     </div>

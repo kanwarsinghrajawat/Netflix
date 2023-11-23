@@ -13,7 +13,7 @@ const Accordion = () => {
 
   return (
     <>
-      <div className="px-80 py-16 flex flex-col gap-3 bg-black items-center justify-center">
+      <div className="px-80 py-16 flex flex-col gap-3 bg-black items-center justify-center max-2xl:px-36 max-xl:px-10  max-sm:px-6">
         <p className="text-4xl font-black text-white py-4 text-center">
           Frequently Asked Questions
         </p>

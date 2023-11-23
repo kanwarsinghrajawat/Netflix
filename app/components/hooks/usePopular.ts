@@ -14,7 +14,7 @@ export const usePopular = () => {
       );
       const data = await response.json();
       dispatch(addPopularMovies(data.results));
-      dispatch(setIsLoader(false));
+      // dispatch(setIsLoader(false));
     } catch (error) {
       console.error("Error fetching data:", error);
     }

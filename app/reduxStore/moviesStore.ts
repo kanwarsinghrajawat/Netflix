@@ -9,6 +9,7 @@ const netflixMoviesSlice = createSlice({
     trailerVedioKey: null,
     isLoader: true,
     searchData: null,
+    searchResultsCrad: null,
   },
   reducers: {
     addPlayingMovies: (state, action) => {
@@ -26,8 +27,12 @@ const netflixMoviesSlice = createSlice({
     setIsLoader: (state, action) => {
       state.isLoader = action.payload;
     },
+
     addSearchData: (state, action) => {
       state.searchData = action.payload;
+    },
+    searchedmovies: (state, action) => {
+      state.searchResultsCrad = action.payload;
     },
   },
 });
@@ -39,6 +44,7 @@ export const {
   addTopRatedMovies,
   setIsLoader,
   addSearchData,
+  searchedmovies,
 } = netflixMoviesSlice.actions;
 
 export default netflixMoviesSlice.reducer;
