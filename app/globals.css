@@ -36,46 +36,18 @@
 .bg-custom {
   background-color: rgb(45, 45, 45);
 }
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+::-webkit-scrollbar {
+  width: 4px;
+  padding-left: 2px;
 }
 
-.spinner {
-  width: 250px;
-  height: 150px;
-  position: relative;
-  animation: rotation 0.75s linear infinite;
-  border-radius: 100em;
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 0, 0, 0.481);
+  border-radius: 4px;
 }
 
-.path {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 20;
-  stroke-linecap: round;
-}
-
-@keyframes rotation {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.modal-enter {
-  opacity: 0;
-  transform: scale(0.9);
-}
-.modal-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
-}
-.modal-exit {
-  opacity: 1;
-}
-.modal-exit-active {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 300ms, transform 300ms;
+::-webkit-scrollbar-track {
+  background-color: black;
+  width: 4px;
 }

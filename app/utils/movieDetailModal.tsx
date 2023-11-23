@@ -17,15 +17,15 @@ const MovieDetailModal = ({
 
   return (
     <>
-      <div className="w-1/4 h-3/4 bg-gray-950  mix-blend-lighten absolute flex flex-col box-border z-100 overflow-y-auto boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)">
+      <div className="w-1/3 h-4/5  bg-gray-950  box-shadow-md animate-fadeIn  mix-blend-lighten absolute flex flex-col box-border z-100 overflow-y-auto rounded-2xl boxShadow: '0 0 10px rgba(0, 0, 0, 0.5) max-lg:w-2/4 max-md:w-2/3  max-sm:w-3/4">
         <div className="">
           <div className="  absolute right-3 top-3 cursor-pointer">
             <Image
-              src="/cancel.png"
+              src="/close-white.png"
               alt="cancel"
               className=" "
-              width={30}
-              height={30}
+              width={20}
+              height={20}
               onClick={closeModal}
             />
           </div>
@@ -38,8 +38,8 @@ const MovieDetailModal = ({
             />
           </div>
         </div>
-        <div className=" p-4 flex flex-col gap-3">
-          <p className="text-3xl font-bold text-white">{title}</p>
+        <div className=" p-4 flex pt-20 flex-col gap-3">
+          <p className="text-3xl font-bold text-gray-200">{title}</p>
           <p className="text-white text-sm ">{overview}</p>
 
           <div className="flex justify-between">
@@ -47,9 +47,9 @@ const MovieDetailModal = ({
             <p className="text-white text-sm">{`Vote Average Date : ${voteAverage}`}</p>
           </div>
         </div>
-        <div className="px-4 pb-4 float-right">
+        <div className="px-4 pb-4 pt-6 float-right">
           <button
-            className="text-white px-7 py-2 bg-gray-700 bg-opacity-70 rounded-sm text-xs flex items-center justify-center"
+            className="text-white px-8 py-3 bg-gray-700 bg-opacity-70 rounded-sm text-sm flex items-center justify-center"
             onClick={closeModal}
           >
             close

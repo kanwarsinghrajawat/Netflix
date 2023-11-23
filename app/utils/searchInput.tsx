@@ -70,8 +70,8 @@ const SearchInput = () => {
         <Image
           src="/search.png"
           alt="search-icon"
-          width={15}
-          height={15}
+          width={20}
+          height={20}
           onClick={openSearchBox}
         />
       ) : (
@@ -81,7 +81,7 @@ const SearchInput = () => {
             type="text"
             placeholder="search"
             value={search}
-            className="bg-transparent focus:outline-none text-white"
+            className="bg-transparent focus:outline-none text-white max-sm:w-32"
             onChange={setDataInSearch}
             onKeyPress={setDataInRedux}
           />

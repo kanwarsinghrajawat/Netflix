@@ -8,7 +8,7 @@ const Modal = () => {
   return (
     <>
       {showModal && (
-        <div className="bg-white absolute p-9 mt-28 w-96 flex flex-col gap-5 max-sm:p-4">
+        <div className="bg-white absolute p-9 mt-28 w-96 flex flex-col gap-5 max-sm:p-4 max-sm:w-72 ">
           <p className="text-2xl font-medium">Leaving So soon ?</p>
           <p className="text-black">
             Just so you know, you don't always need to sign out of Netflix. It's

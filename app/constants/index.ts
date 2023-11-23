@@ -48,10 +48,8 @@ export const footerLinks = [
 ];
 
 export const movieNavbarLinks = [
-  { name: "Home", link: "" },
-  { name: "Tv Shows ", link: "" },
-  { name: "Movies", link: "" },
-  { name: "New & Popular", link: "" },
-  { name: "My List", link: "" },
-  { name: "Browse By Languages", link: "" },
+  { name: "Home", link: "/movie" },
+  { name: "Now Playing ", link: "/movie" },
+  { name: "Top Rated Movies", link: "/movie" },
+  { name: "Popular Movies", link: "/movie" },
 ];

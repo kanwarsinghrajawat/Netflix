@@ -12,20 +12,25 @@
       "static/css/app/movie/page.css",
       "static/chunks/app/movie/page.js"
     ],
-    "/owner/page": [
+    "/signout/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/owner/page.js"
-    ],
-    "/vedio/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/vedio/page.js"
+      "static/chunks/app/signout/page.js"
     ],
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
+    ],
+    "/signIn/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/signIn/page.js"
+    ],
+    "/owner/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/owner/page.js"
     ]
   }
 }

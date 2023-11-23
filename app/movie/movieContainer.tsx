@@ -3,10 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNowHook } from "../components/hooks/useNowPlaying";
 import MovieCard from "./movieCard";
-import { POSTER_URL } from "../constants";
 import { usePopular } from "../components/hooks/usePopular";
 import { useTopRated } from "../components/hooks/useTopRated";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NoResultFound from "./noResultFound";
@@ -20,14 +18,6 @@ const MovieContainer = () => {
   useEffect(() => {
     setData(movies || []);
   }, [movies]);
-
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 8,
-    slidesToScroll: 8,
-  };
 
   return (
     <>
@@ -57,21 +47,27 @@ const MovieContainer = () => {
             </div>
             <div className="flex flex-col gap-4">
               <p className="text-white text-xl font-bold">Popular Movies</p>
-              <div className="flex gap-2  overflow-x-auto">
+              <div className="flex gap-2  overflow-x-auto  scrollbar-none ">
                 {/* <Slider {...settings}> */}
-                {data?.popularMovies?.map((movie: any, key: number) => (
-                  <React.Fragment key={key}>
-                    <MovieCard
-                      key={movie.id}
-                      id={movie.id}
-                      title={movie.title}
-                      poster_path={movie.poster_path}
-                      overview={movie.overview}
-                      releaseDate={movie.release_date}
-                      voteAverage={movie.vote_average}
-                    />
-                  </React.Fragment>
-                ))}
+                {
+                  data?.popularMovies?.length &&
+                    data.popularMovies.map((movie: any, key: number) => (
+                      <React.Fragment key={key}>
+                        <MovieCard
+                          key={movie.id}
+                          id={movie.id}
+                          title={movie.title}
+                          poster_path={movie.poster_path}
+                          overview={movie.overview}
+                          releaseDate={movie.release_date}
+                          voteAverage={movie.vote_average}
+                        />
+                      </React.Fragment>
+                    ))
+
+                  // <Shimmer/>
+                }
+
                 {/* </Slider> */}
               </div>
             </div>

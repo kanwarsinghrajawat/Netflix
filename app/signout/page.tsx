@@ -1,6 +1,5 @@
-"use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import FooterIndex from "../components/footerIndex";
 import Link from "next/link";
 import Modal from "../utils/modal";
@@ -24,7 +23,7 @@ const SignOut = () => {
           </Link>
         </div>
       </div>
-      <div className="flex items-start justify-center">
+      <div className="flex items-start justify-center max-sm:h-[70vh]">
         <Modal />
 
         <img

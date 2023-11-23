@@ -27,18 +27,17 @@ const MovieCard: React.FC<MovieCardProps> = ({
   return (
     <div className="h-full">
       <div
-        className="w-[150px] h-auto cursor-pointer"
+        className="w-[182px] h-auto cursor-pointer"
         onClick={handleFilterModal}
       >
         <img
           src={`${POSTER_URL}${poster_path}`}
           alt={title}
-          className="movie-poster h-full w-[150px] rounded-sm"
+          className="movie-poster h-full w-[182px] rounded-sm"
         />
       </div>
       {openModal && (
         <>
-          {console.log("FGTYHGHIJHK", poster_path)}
           <div className="h-screen bg-black bg-opacity-80 fixed inset-0 w-screen z-50 flex items-center justify-center rounded-lg ">
             <MovieDetailModal
               id={id}
