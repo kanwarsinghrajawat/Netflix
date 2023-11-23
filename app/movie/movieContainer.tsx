@@ -100,7 +100,7 @@ const MovieContainer = () => {
                 <p className="text-white text-3xl font-bold">Search Results</p>
                 {filteredData.map((movie: any, index: any) => (
                   <React.Fragment key={index}>
-                    <div className="flex items-center justify-center">
+                    <div className="flex items-center justify-center h-[70vh]">
                       <MovieCard
                         key={movie.id}
                         id={movie.id}

@@ -2,7 +2,7 @@ import React from "react";
 
 const NoResultFound = () => {
   return (
-    <div className="h-[60vh] flex items-center justify-center">
+    <div className="h-[70vh] flex items-center justify-center">
       <div className=" h-full flex  justify-center flex-col gap-2">
         <p className="text-white text-sm">No Match Found </p>
         <div>
