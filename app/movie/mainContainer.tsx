@@ -11,8 +11,6 @@ const MainContainer = () => {
     (store: any) => store?.movies?.searchResultsCrad
   );
   if (!movies || !movies.nowPLayingMovies) return;
-  // console.log("mainContainer movies");
-  // console.log(movies);
 
   const mainMovies = movies?.nowPLayingMovies?.[2];
 

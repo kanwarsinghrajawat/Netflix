@@ -8,7 +8,7 @@ interface MovieCardProps {
   poster_path: string;
   overview: string;
   releaseDate: string;
-  voteAverage: string;
+  voteAverage: number;
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({

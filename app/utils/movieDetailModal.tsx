@@ -2,7 +2,17 @@
 import Image from "next/image";
 import React from "react";
 
-const MovieDetailModal = ({
+interface MovieDetailModalProps {
+  closeModal: () => void;
+  title: string;
+  overview: string;
+  poster_path: string;
+  releaseDate: string;
+  voteAverage: number;
+  id: number;
+}
+
+const MovieDetailModal: React.FC<MovieDetailModalProps> = ({
   closeModal,
   title,
   overview,
