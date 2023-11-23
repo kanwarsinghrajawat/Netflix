@@ -1,5 +1,9 @@
-FlatIcon: app to download some icons
+Netflix App using Next Js
 
-IMDB : Movie details taken from the IMDB
+Tools : Next js, Typescript, Tailwind, Redux
 
-spinner : "https://uiverse.io/aadium/friendly-puma-64"
+Imdb Api's For Movie Details
+
+Icons from FlatIcon
+
+Images : From Netflix Network Page
